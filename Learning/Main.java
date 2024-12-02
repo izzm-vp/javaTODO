@@ -46,8 +46,16 @@ class Learning {
           for (Book book : TanLib.Books) {
             if (book.id == intBook) {
               TanLib.RemoveBook(book);
-              System.out.println("book removed !");
-              running = false;
+              System.out.println("book removed! see books list ? (yes or no)");
+              String yesOrNo=scann.nextLine();
+              if(yesOrNo.equals("yes")){
+                TanLib.BooksList();
+              }else{
+                running=false;
+              }
+
+
+              
 
             }
           }
